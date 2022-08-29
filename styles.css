@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #32314e;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.tarjeta{
+    background-image: url(assets/images/blob-scene-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .7);
+    display: flex;
+    transform-style: preserve-3d;
+    transition: 1.5s ease all;
+    cursor: pointer;
+    z-index: 2;
+    margin: 10px;
+    /* transform: rotateY(180deg); */
+    
+}
+
+@media screen and (max-width: 768px) {
+    .main{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .tarjeta{
+        width: 400px;
+        height: 250px;
+        margin-top: 50px;
+    }
+}
+
+/* Clase para rotar la tarjeta */
+
+.--active{
+    opacity: 1;
+    transform: rotateY(180deg);
+}
+
+.trasero, .frente{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    /* background-color: red; */
+    -webkit-backface-visibility: hidden;
+    
+}
+
+/* Parte trasera de la tarjeta */
+
+.trasero{
+    transform: rotateY(180deg);
+    position: absolute;  
+    display: flex;
+    flex-direction: column;  
+}
+
+/* .tarjeta:hover{
+    opacity: 1;
+    transform: rotateY(180deg);
+} */
+
+
+
+.frente__title{
+    margin-left: 15px;
+    margin-top: 15px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .frente__title{
+        font-size: 20px;
+    }
+}
+
+.frente__sim{
+    width: 60px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .frente__sim{
+        width: 40px;
+    }
+}
+
+.frente__number{
+    display: flex;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    justify-content: space-around;
+    letter-spacing: 5px;
+    font-weight: 600;    
+}
+
+@media screen and (max-width: 768px) {
+    .frente__number{
+        font-size: 20px;
+    }
+}
+
+
+.frente__vencimiento{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+}
+
+
+
+.vencimiento{
+    margin-left: 40px;
+    color: white;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .vencimiento{
+        font-size: 15px;
+    }
+}
+
+.vence{
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+
+.frente__abajo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    /* background-color: blue; */
+}
+
+.nombre{
+    color: white;
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    .nombre{
+        font-size: 15px;
+    }
+}
+
+
+.logo__marca{
+    /* background-color: red; */
+    width: 25%;
+    height: 70px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .nombre{
+        font-size: 15px;
+    }
+}
+
+.logo__marca img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+.trasero__magnetica{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(179, 179, 179);
+    margin-top: 25px;
+}
+
+
+
+.trasero__firma{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.firma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/images/polygon-scatter-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+    height: 100%;
+    margin-left: 15px;
+
+}
+
+.firma__text{
+    color: rgb(75, 39, 87);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+@media screen and (max-width: 768px) {
+    .firma__text{
+        font-size: 25px;
+    }
+}
+
+.cv{
+    background-color: rgb(253, 253, 253);
+    color: black;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.cheems{
+    /* background-color: red; */
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 450px;
+    width: 10%;
+    opacity: .5;
+}
+
+@media screen and (max-width: 768px) {
+    .cheems{
+        margin-top: 200px;
+        margin-left: 350px;
+    }
+}
+
+/* ------------ Empieza formulario ---------------- */
+.card__form{
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    color: whitesmoke;
+    background-color: rgb(11, 15, 32);
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .card__form{
+        width: 85%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+.form__tarjeta{
+    padding: 20px;
+    margin: 30px;
+}
+
+.form__tarjeta label {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .form__tarjeta label{
+        font-size: 15px;
+    }
+}
+
+.form__tarjeta input,
+.form__tarjeta select {
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 145, 0, 0);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .form__tarjeta input,
+    .form__tarjeta select {
+        font-size: 12px;
+        height: 30px;
+    }
+}
+
+.form__tarjeta input{
+    margin-bottom: 20px;
+}
+
+.form__numero, .form__nombre{
+    display: flex;
+    flex-direction: column;
+}
+
+.exp__ccv{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+
+.form_expira{
+    width: 100%;
+    /* background-color: red; */
+}
+
+.form_expira label,
+.ccv label{
+    /* background-color: blue; */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form_expira_content{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    /* background-color: blue; */
+}
+
+.expira{
+    width: 100%;
+    position: relative;
+    margin-right: 10px;
+    /* background-color: red; */
+}
+
+.expira select{
+    -webkit-appearance: none;
+    height: 100%;
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .expira select {
+        height: 85%;
+    }
+}
+
+.expira i{
+    /* background-color: red; */
+    position: absolute;
+    color: rgb(149, 92, 151);
+    top: 20px;
+    right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .expira i {
+        top: 10px;
+        right: 9px;
+    }
+}
+
+.ccv{
+    width: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    .ccv{
+        width: 80px;
+    }
+}
+
+.btn-enviar{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(149, 92, 151);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-enviar{
+        font-size: 15px;
+    }
+}
+
+.btn-enviar:hover{
+    background-color: rgba(149, 92, 151, 0.493);
+}
+
+.expira option{
+    background-color: rgb(11, 15, 32);
+}
+
+
+
+

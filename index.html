@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/89a461c10c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="main">
+        <section class="tarjeta" id="tarjeta">
+            <div class="frente">
+                <h1 class="frente__title">banco</h1>
+                <img src="assets/images/sim-cuack.png" alt="" class="frente__sim">
+                <div class="frente__number">
+                    <!-- <p class="numero">#### #### #### ####</p> -->
+                        <span class="numero">
+                        &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF;</span>
+                </div>
+                <div class="frente__vencimiento" id="expiracion">
+                    <p class="vencimiento"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                </div>
+                <div class="frente__abajo">
+                    <p class="nombre">Nombre</p>
+                    <div class="logo__marca" id="logo__marca">
+                        <!-- <img src="assets/images/logos/visa.png"> -->
+                    </div>
+                </div>
+            </div>
+            <div class="trasero">
+                <div class="trasero__magnetica"></div>
+                <div class="trasero__firma">
+                    <div class="firma">
+                        <p class="firma__text"></p>
+                    </div>
+                    <p class="cv" id="ccv"></p>
+                </div>
+                <img src="assets/images/cheems.png" alt="" class="cheems">
+            </div>
+        </section>
+        <!-- Formulario -->
+        <section class="card__form">
+            <form action="" id="form_tarjeta" class="form__tarjeta">
+                <div class="form__numero">
+                    <label for="input_numero">Numero Tarjeta</label>
+                    <input type="text" id="input_numero" maxlength="19" autocomplete="off">
+                </div>
+                <div class="form__nombre">
+                    <label for="input_nombre">Nombre</label>
+                    <input type="text" id="input_nombre" maxlength="19" autocomplete="off">
+                </div>
+                <div class="exp__ccv">
+                    <div class="form_expira">
+                        <label for="month">Expiracion</label>
+                        <div class="form_expira_content">
+                            <div class="expira">
+                                <select name="mes" id="selectMes">
+                                    <option disabled selected>Mes</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="expira">
+                                <select name="year" id="selectYear">
+                                    <option disabled selected>Año</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ccv">
+                        <label for="inputCcv">CCV</label>
+                        <input type="text" id="inputCcv" maxlength="3">
+                    </div>
+                </div> 
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+<script src="scripts.js"></script>
+</body>
+</html>
